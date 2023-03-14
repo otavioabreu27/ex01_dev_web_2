@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    <div align="center" id="cadastro" <%= hidden_cadastro %>>
+        <form action="/usuario" method="POST">
+        <h3>Digite o novo nome:</h3>
+        <input type="text" name="nome" placeholder="Nome">
+        <h3>Digite o novo sobrenome:</h3>
+        <input type="text" name="sobrenome" placeholder="Sobrenome">
+        <h3>Digite o novo país:</h3>
+        <input type="text" name="pais" placeholder="País">
+        <h3>Digite a nova idade:</h3>
+        <input type="text" name="idade" placeholder="Idade">
+        <br>
+        <button type="submit" name="submit">Cadastrar</button>
+    </form>
+    </div>
+    <div align="center" id="dados" <%= hidden_dados %>>
+        <h3>Dados do Usuário</h3>
+        <p><b>Nome: </b> <%= nome %> </p>
+        <p><b>Sobrenome: </b> <%= sobrenome %> </p>
+        <p><b>País: </b> <%= pais %> </p>
+        <p><b>Idade: </b> <%= idade %> </p>
+        <a href="/dados_usuario">
+            <button>Alterar Dados</button>
+        </a>
+    </div>
+</body>
+</html>
